@@ -1,7 +1,7 @@
 # 'bundle exec jekyll serve'. If you change this file, please restart the server process.
 # 'bundle info --path minima' to find files for minima theme
 #
-# If you need help with YAML syntax, here are some quick references for you: 
+# If you need help with YAML syntax, here are some quick references for you:
 # https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
 # https://learnxinyminutes.com/docs/yaml/
 #
@@ -26,3 +26,4 @@ second_github_username:  beakfriends
 theme: minima
 plugins:
   - jekyll-feed
+  - jekyll-target-blank

@@ -1,0 +1,38 @@
+.image
+{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.captioned_image
+{
+  margin-top: 10px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.column2
+{
+  float: left;
+  width: 50%;
+}
+
+.column3
+{
+  float: left;
+  width: 33%;
+}
+
+/* Clear floats after the columns */
+.row:after
+{
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.spacer
+{
+  margin-top: 100px;
+}
