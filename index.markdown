@@ -161,22 +161,31 @@ Since time passes both when the player moves and also when the player interacts 
 
 So, the player needs to be able to interact with things. It would be nice, I thought, to not particularly care what the player was interacting with. It would be nice to tell an entity "the player is interacting with you", and then the entity could do whatever it needed to do. Long story short, I managed to do that. For those who aren't interested, feel free to skip the technical bit, where I explain exactly *how* I managed it.
 
-{% info_box The Technical Bit %}
-    For me and my OOP brain, it felt like the best way to do this was with a base class and a virtual TriggerInteract function, which each entity class could override.
-    <br><br>
+<div class='info-block'>
+  <div class = 'info-box'>
+    <div class='box-title'>
+      The Technical Bit
+    </div>
+    <div class='box-contents'>
+      <div>
+        For me and my OOP brain, it felt like the best way to do this was with a base class and a virtual TriggerInteract function, which each entity class could override.
+        <br><br>
 
-    Each entity would need different information about the player to determine what interaction was possible. For example, you can only water an Incubator plant if you're holding water. To do this, I passed a little structure containing some information about the player to the InteractedWith function. Each entity just used the data that it needed.
-    <br><br>
+        Each entity would need different information about the player to determine what interaction was possible. For example, you can only water an Incubator plant if you're holding water. To do this, I passed a little structure containing some information about the player to the InteractedWith function. Each entity just used the data that it needed.
+        <br><br>
 
-    Technically passing information that any interact might need to <i>all</i> interacts isn't a particularly nice way to do this, but it was the best I could do with the small amount of time I had. I may come back to this at some point.
+        Technically passing information that any interact might need to <i>all</i> interacts isn't a particularly nice way to do this, but it was the best I could do with the small amount of time I had. I may come back to this at some point.
 
-    {% include captioned_image.html url="assets/first_trigger_interact.png" width="600" description="The TriggerInteract function, showing it's virtual and takes an InteractParams struct as input" %}
+        {% include captioned_image.html url="assets/first_trigger_interact.png" width="600" description="The TriggerInteract function, showing it's virtual and takes an InteractParams struct as input" %}
 
-    Halfway through this jam I switched from Atom to VSCode as my code editor for working with Unity and I'm never looking back. Breakpoints? Hell yeah.
-    <br><br>
+        Halfway through this jam I switched from Atom to VSCode as my code editor for working with Unity and I'm never looking back. Breakpoints? Hell yeah.
+        <br><br>
 
-    In the "watering an Incubator" interaction example, the player needs to be told that they should no longer be holding water after they've used it. For this reason, I include a reference to the player in that InteractParams struct.
-{% endinfo_box %}
+        In the "watering an Incubator" interaction example, the player needs to be told that they should no longer be holding water after they've used it. For this reason, I include a reference to the player in that InteractParams struct.
+      </div>
+    </div>
+  </div>
+</div>
 
 With this set up I was able to implement a huge amount of the game, and once Max had provided a player controller that delivered movement input, it felt like we were 80% of the way there! There were some simple bounds checks to make sure that the player wasn't able to walk directly off the edge of the map, and trying to walk in to a tile that contained an entity triggered an interaction with that entity.
 

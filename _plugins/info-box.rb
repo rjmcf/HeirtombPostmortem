@@ -1,8 +1,5 @@
 module Jekyll
   class InfoBoxBlock < Liquid::Block
-    safe true
-    priority :low
-    
     def initialize(tag_name, title, tokens)
       super
       @title = title
