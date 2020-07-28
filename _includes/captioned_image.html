@@ -1,5 +1,7 @@
-<div {% if include.caption %} class="captioned_image" {% else %} class="image" {% endif %}> 
-  <img src="{{ include.url }}" alt="{{ include.description }}" width="{{ include.width }}">
+<div {% if include.caption %} class="captioned_image" {% else %} class="image" {% endif %}>
+  <a href="{{ include.url }}" target="_blank" rel="noopener noreferrer">
+    <img src="{{ include.url }}" alt="{{ include.description }}" width="{{ include.width }}">
+  </a>
   {% if include.caption %}
   <br>
   <em>{{ include.caption }}</em>
