@@ -13,9 +13,28 @@ The theme for this jam was "Out of control". Max was busy just as the jam starte
 
 I spent that initial time writing down obvious things that came to mind when I thought of what it means to be "Out of control", partly to try and think of an idea, but also partly to just get all the obvious ideas *out there* and out of the way. One of the criteria for marking submissions is Originality, so I wanted to make sure that the idea we went with wasn't totally obvious, as I assumed an obvious idea would have lots of people using it, and thus anything we did would be less original.
 
-Max came back with an idea that could knock those out of the park, if it weren't for the time constraints we were under:
+Max came back with an idea that could knock those first musings out of the park, if it weren't for the time constraints we were under:
 
 {% include captioned_image.html url="assets/first_idea.png" width="700" description="The idea: a roguelike where you age a year every time you move" %}
+
+<div class='info-block'>
+  <div class = 'info-box'>
+    <div class='box-title'>
+      Definition: Roguelike
+    </div>
+    <div class='box-contents'>
+      <div>
+        "Roguelike" is a genre of games that's been around since the late 70's, early 80's. (I also use "rogue like" and "rogue-like" in some of the screenshots because I wasn't paying close attention as I was writing)
+        <br><br>
+
+        These games were initially inspired by Dungeons and Dragons and a 1975 video game called "Colossal Cave Adventure". Generally the game is set in some dank dungeon split into various rooms, each of which would contain some monsters to kill or some treasure to find. Generally if the player died, then they would lose everything and have to restart from the beginning, and generally the rooms making up the dungeon were semi-randomised, meaning the experience would be different each time you played. Generally action was split into "turns" (like D&D), so enemies have an opportunity to move and/or attack after each time the player moves/attacks etc.
+        <br><br>
+
+        Later iterations allowed you to take a team of adventurers down through the dungeon, known as a "party". Of course as time went on more variety was introduced and some of the classic aspects were removed or modified. See "Spelunky", "Faster Than Light", "Crypt of the NecroDancer" and "Slay the Spire" for some examples of different directions that this genre has been taken.
+      </div>
+    </div>
+  </div>
+</div>
 
 We both absolutely adored this idea, for a number of reasons:
 1. It had a very clear narrative hook, which we always love
@@ -27,7 +46,7 @@ There were lots of reasons why it wouldn't work though, chiefly:
 {% include captioned_image.html url="assets/too_hard.png" width="400" description="Problem 1: we don't have time" %}
 {% include captioned_image.html url="assets/dialogue_problem.png" width="600" description="Problem 2: we don't wanna write dialogue" %}
 
-We entered the GMTK Game Jame last year as well, postmortems for which you can find [here](https://twitter.com/beakfriends/status/1158155051279540224?s=21) and [here](https://twitter.com/rjmcfdev/status/1158298527417720832?s=21). One of the biggest problems we ended up having was how much dialogue we had to write for the story to make sense. On a scale of mechanics driven to narrative driven, last year's submission was almost a book. We didn't want to make the same mistake this year!
+We entered the GMTK Game Jam last year as well, postmortems for which you can find here: [Max's](https://twitter.com/beakfriends/status/1158155051279540224?s=21), and [mine](https://twitter.com/rjmcfdev/status/1158298527417720832?s=21). One of the biggest problems we ended up having was how much dialogue we had to write for the story to make sense. Last year's submission could have been entered into a short-story writing competition. We didn't want to make the same mistake this year!
 
 But among the discussion of this initial idea were the seeds of something that we thought might be able to work:
 
@@ -44,13 +63,13 @@ While we probably couldn't do exactly the same as Outer Wilds, the idea of some 
 
 {% include captioned_image.html url="assets/alien_race_idea.png" width="400" description="What if it's an alien race with a short lifespan?" %}
 
-This solved a bunch of our problems simultaneously. We no longer had to design loads of human characters, because all of the members of this species can look bizarre and similar, perhaps with some very simple procedural generation for variety. Similarly, there would be no dissonance between the humans ageing very quickly while the environment stayed mostly unchanged. It also meant that the achievement they were aiming for over the many generations could be a lot more abstract, because they were aliens! Maybe the player wouldn't even have to understand what they were doing, as long as they understood that getting it completed before the end of the world was important.
+This solved a bunch of our problems simultaneously. We no longer had to design loads of human characters, because all of the members of this species can look bizarre and similar, perhaps with some very simple variation driven by code and randomness. Similarly, there would be no dissonance between the humans ageing very quickly while the environment stayed mostly unchanged. It also meant that the achievement they were aiming for over the many generations could be a lot more abstract, because they were aliens! Maybe the player wouldn't even have to understand what they were doing, as long as they understood that getting it completed before the end of the world was important.
 
 We were very clear about one thing.
 
 {% include captioned_image.html url="assets/no_plants.png" width="400" description="NO PLANTS" %}
 
-With that clear to all of us, and the pieces all beautifully set up, Max just had to knock them down.
+With that clear to both of us, and the pieces all beautifully set up, Max just had to knock them down.
 
 {% include captioned_image.html url="assets/putting_it_together.png" width="800" description="The aliens look after a tree but have to leave it unguarded to gather resources" %}
 
@@ -70,15 +89,15 @@ With that, we transitioned to writing some ideas in a design document. We did so
 
 {% include captioned_image.html url="assets/scene_claiming.png" width="800" description="We're very nice to each other" caption="We're very nice to each other" %}
 
-In the design doc, we solidified some ideas and started getting closer to a final design. We kept the enemies but rather than implementing combat mechanics decided to add a layer of indirection to the attacks you could do to the enemies, by letting you place towers that shoot bullets and do damage. You couldn't control how often they fired or in what direction or how much damage they did, all you could control is where they were placed. It also meant that you had more time to do other important things while the towers were working away for you.
+In the design doc, we solidified some ideas and started getting closer to a final design. We kept the enemies, but rather than implementing fully-fledged combat mechanics, we decided to reduce the control that players have over attacks by letting them place towers that shoot bullets and do damage. They can't control how often they fire or in what direction or how much damage they do, all they can control is where they are placed. It also means that you have more time to do other important things while the towers are working away for you.
 
-We also moved away from the idea of having other members of the species to mate with, as that would require implementing them. Instead, we settled on the idea that only one member of the race is alive at a time, and part of their duties were to lay eggs in incubator plants found around the environment, look after them, and thus ensure the continuation of the species.
+We also moved away from the idea of having other members of the species to mate with, as that would require implementing them. Instead, we settled on the idea that only one member of the race is alive at a time, and part of their duties is to lay eggs in incubator plants found around the environment, look after them, and thus ensure the continuation of the species.
 
 Can't resist showing you what that idea looked like as it flopped wetly to the floor like a newborn giraffe.
 
 {% include captioned_image.html url="assets/fuck_the_plants.png" width="500" description="Maybe you have to fuck the plant" %}
 
-This idea also added a painful poignance to our story:
+This idea also added a painful poignancy to our story:
 
 {% include captioned_image.html url="assets/loophole_closed.png" width="600" description="If the incubators are part of their lifecycle, they can't leave" %}
 
@@ -86,7 +105,7 @@ Throughout this whole process we'd had this idea that the tree would need water 
 
 {% include captioned_image.html url="assets/corpse_resource.png" width="500" description="The towers and the tree need the corpses of your ancestors" %}
 
-With you dying so frequently, we needed something to do with the corpses. We'd already thought that they could start taking up space and would get in the way, but now they became a vital resource to the planet, and to you as a player. The planet needs you. And you need the planet.
+With the player's character dying so frequently, we needed something to do with the corpses. We'd already thought that they could start taking up space and would get in the way, but now they became a vital resource to the planet, and to you as a player. The planet needs you. And you need the planet.
 
 {% include captioned_image.html url="assets/emotional.png" width="800" description="Symbiosis is beautiful" %}
 
@@ -136,7 +155,7 @@ For clarity, that orange shape (like each of the others) is in fact a square, yo
 
 {% include captioned_image.html url="assets/3D_debug_colours.png" width="400" caption="Notice that there are two light green squares. That was a fun bug to fix" description="When the tiles have some thickness you can see the perspective better" %}
 
-Now I had this setup, I could very easily start putting together placeholders for all our entities. The list of entities I was working from was as follows:
+Now I had this set up, I could very easily start putting together placeholders for all our entities. The list of entities I was working from was as follows:
 
 * The player character
 * The tree
@@ -217,7 +236,7 @@ There is some dramatic irony here, because you know that this didn't get finishe
 
 ## Uh-Oh It's Sunday
 
-I started Sunday morning by trying to implement the towers. Initially, I was thinking that they would be very difficult to implement, as I was imagining them swivelling around and firing directly at enemies. Max had a better suggestion, that they just fire in all cardinal directions every so many turns. This felt good, as it added to the strategy required of the player when they were placing these towers. It was also great that it would make them so much easier to implement!
+I started Sunday morning by trying to implement the towers. Initially, I was thinking that they would be very difficult to implement, as I was imagining them swivelling around and firing directly at enemies. Max had a better suggestion, that they just fire in all cardinal directions (North, South, East, West) every so many turns. This felt good, as it added to the strategy required of the player when they were placing these towers. It was also great that it would make them so much easier to implement!
 
 Or so I thought.
 
@@ -231,7 +250,7 @@ The main entity that I missed off the list earlier, the one that I alluded to as
 
 1. Tiles can only hold one entity
     * This means that bullets cannot pass over water, because the tile could not hold the water entity and the bullet entity at the same time.
-    * Fixing this also meant setting up ways for entities to know what types of entities were obstacles to their movement, which was different for each type. For instance, enemies could pass through the hedges that surrounded the play area, but bullets and players could not. Bullets could pass over water, but players and enemies could not.
+    * Fixing this also meant setting up ways for entities to know what types of entities were obstacles to their movement, which was different for each type. For instance, enemies could pass through the hedges that surrounded the play area (so that they could emerge from them and surprise you), but bullets and players could not. Bullets could pass over water, but players and enemies could not.
 2. Only the Player needs to interact with things
     * This one is especially bad, because I knew that enemies were going to be attacking the tree at some point, I just hadn't remembered to allow that to happen!
 
@@ -242,7 +261,7 @@ caption="I don't like thinking about features in terms of how long they take to 
 
 That is time that I absolutely did not have. Especially considering the next task on the board, which was enemy AI.
 
-We were running out of time at this point, we only had seven hours left of the time, and it suddenly felt like there was a lot that needed doing. So the AI had to be relatively simple. It was around this time that I started getting really focused on getting an MVP (minimum viable product) down first. The bare minimum had to be done before we could do anything else.
+We were running out of time at this point, we only had seven hours left, and it suddenly felt like there was a lot that needed doing. So the AI had to be relatively simple. It was around this time that I started getting really focused on getting an MVP (minimum viable product) down first. The bare minimum had to be done before we could do anything else.
 
 With that perspective, what do enemies need to do?
 * Be spawned off the edge of the world
@@ -283,7 +302,7 @@ Unfortunately, we didn't really consider what this meant for us in terms of work
 
 This in itself wasn't the end of the world. We could have written reams of text on the game's page on itch.io explaining how to do everything. Sure, it wouldn't have been the experience we intended, but at least people could have seen *something* of what we were going for.
 
-Unfortunately, at around the same time we discover that it's damn near unplayable for us too, because the tree doesn't do anything to indicate how much health it has left. When the tree dies, you just lose without any indication as to why. There are a number of things whose state is *really important*, and we just didn't have time to implement ways for them to signal what their state is.
+At around the same time we discover that it's damn near unplayable for us too, because the tree doesn't do anything to indicate how much health it has left. When the tree dies, you just lose without any indication as to why. There are a number of things whose state is *really important*, and we just didn't have time to implement ways for them to signal what their state is.
 
 The name "Heirtomb" was arrived at in the frenzy of the last hour or so, there wasn't a whole lot of thought that could be put into that either. With two minutes left until the deadline, we uploaded a build and submitted our entry. About three hours later, I took it down again.
 
@@ -294,15 +313,15 @@ caption="\"... not with a bang, but with a whimper\"" description="I told Max th
 
 More than anything, I am taking this as an opportunity to learn some things. What would I do differently next time?
 
-* Plan more. It felt like we planned *a lot*, but looking back and seeing some of the critically important things we missed and much time that wasted in the later hours, we needed to plan even more.
-* Be even firmer about getting the MVP first. Both Max and I are still pretty new to game jams, and this is only the second that we've done together too, so I think we're still learning how to do them, and how to work together on them. I certainly hope to learn more about Unity so that I'm not having to bug Max for help as much and hopefully that will mean that I can contribute more too.
+* Plan more. It felt like we planned *a lot*, but looking back and seeing some of the critically important things we missed and how much time that wasted in the later hours, we needed to plan even more.
+* Be even firmer about getting the minimum viable product (MVP) first. Both Max and I are still pretty new to game jams, and this is only the second that we've done together too, so I think we're still learning how to do them, and how to work together on them. I certainly hope to learn more about Unity before next time too!
 * Be careful of what features we're suggesting, especially when we're adding them later. Again, deciding to remove written language was a great idea, but in hindsight we were never going to have the time to do it right. MVP required that people knew how to play the game, so having some way of getting that information across in-game was a requirement that we just didn't consider.
 
 I could, if things were different, be unspeakably disappointed about what happened during this year's GMTK Game Jam. If you compare this year's entry with last year's, they are worlds apart. Last year the main thing we were missing was a satisfying ending, otherwise it's quite fun. This year we were missing a good three or four things without which the game was unplayable. We didn't even get our MVP. Last year, I was absolutely devastated. I felt like I had let everyone down: myself, Max, the people who had got hyped about the game and wanted to see it. Have you... have you read the postmortem I wrote last year? ([here again](https://twitter.com/rjmcfdev/status/1158298527417720832?s=21) if you haven't) It's *really* sad. I feel very deeply for that poor broken boi with his poor broken plant. My girlfriend will tell you that I was not fun to be around that Sunday, I spent a good six hours constantly on the verge of tears. There was lots of shouting.
 
 But this time, the process was completely different. We were still very busy the whole 48 hours and it was still quite stressful, but I feel *content* now. I felt content the whole discord call with Max from 6:20pm Sunday till the end at 8pm, which we used to communicate more easily during the final push for the deadline. I felt content after we finished and each went for our own dinner. I felt content later that night as I removed our submission from the jam.
 
-I think last year I got caught up in the spectacle of it all. I was aware that Max had an Audience tm and I think both of us played to that very hard. When my stuff wasn't working, I was worried what they would think of me. I was worried that Max would be annoyed that I made him look bad in front of everyone. To be clear, this was all just my own insecurities coming out, there was no chance of any of that happeneing. Nevertheless, I don't think I really understood any of this at the time, I just felt scared and worried and upset. I think we were making the game *for* those people on Twitter.com. This time, we were making the game for us, and it was a much more comfortable and enjoyable experience.
+I think last year I got caught up in the spectacle of it all. I was aware that Max had an Audience tm and I think both of us played to that very hard. When my stuff wasn't working, I was worried what they would think of me. I was worried that Max would be annoyed that I made him look bad in front of everyone. To be clear, this was all just my own insecurities coming out, there was no chance of any of that happening. Nevertheless, I don't think I really understood any of this at the time, I just felt scared and worried and upset. I think we were making the game *for* those people on Twitter.com. This time, we were making the game for us, and it was a much more comfortable and enjoyable experience.
 
 Last year, I was proud of Max's work. This year, I'm proud of our work, and I'm proud of *my* work. Honestly, that's how I want to measure our success this year.
 
@@ -312,7 +331,21 @@ We don't want to leave it here! We've got this amazing idea and it would be a di
 
 ## Commit Message Mashup
 
-I've gone through our history on GitHub, and sampled some of the best commit messages I could find for you. Enjoy.
+<div class='info-block'>
+  <div class = 'info-box'>
+    <div class='box-title'>
+      Definition: Commit Message
+    </div>
+    <div class='box-contents'>
+      <div>
+        When multiple people are working on the same code project together, it's really useful to have a way of managing the changes that each of you make and making sure that work isn't lost if multiple people try to change the same file at the same time. We used GitHub for this. When you make a change that everyone can see (known as "committing a change to the repository", or "committing to the repo", or just "committing"), it's good practice to leave a little message with the change (sometimes called "a commit") to explain what work was done, so that you can undo that change if it breaks something.
+        <br><br>
+
+        However, good practices rarely survive the pressure of short deadlines, so sometimes those "commit messages" can get a little... unhinged.
+      </div>
+    </div>
+  </div>
+</div>
 
 <div class="row">
   <div class="column3">
